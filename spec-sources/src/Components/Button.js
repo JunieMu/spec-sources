@@ -1,8 +1,8 @@
-function Button({label, type}) {
+function Button({label, type, onClick}) {
     return (
-        <div className={type}>
+        <button className={type} onClick={onClick}>
             <h2 className="button-text">{label}</h2>
-        </div>
+        </button>
     );
 }
 
