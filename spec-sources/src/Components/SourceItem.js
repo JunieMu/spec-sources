@@ -1,5 +1,5 @@
 import Button from './Button';
-function SourceItem({itemNumber, itemSource, itemEmail}) {
+function SourceItem({itemNumber, itemSource, itemEmail, onDelete}) {
     return (
         <div className="source-item">
             <h2 className="item-number">{itemNumber}</h2>
@@ -7,7 +7,10 @@ function SourceItem({itemNumber, itemSource, itemEmail}) {
             <h2 className="item-email">{itemEmail}</h2>
             <Button
                 label = "DELETE"
-                type = "del-button"/>
+                type = "del-button"
+                onClick = {onDelete}
+                />
+                
         </div>
     );
 }
